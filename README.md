@@ -42,3 +42,10 @@ After that, set the value inside to 0
 
 > sudo ./arpPoison.py 10.0.0.2 10.0.0.3 - arp poisoning between the host 10.0.0.2 and 10.0.0.3
 
+# TODO
+* Better variable names
+* The script must run as "sudo" - add a condition to remind users that when executing without "sudo"
+* Use less scapy functions - more pure python
+* README with wireshark examples
+* Create a commented code - maybe using jupyter notebook or just a new script alongside the main one.
+
