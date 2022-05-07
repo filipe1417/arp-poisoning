@@ -21,6 +21,7 @@ For this, enable IP Forwarding.
 Open the following file with your favorite text editor:
 '/proc/sys/net/ipv4/ip_forward'
 > Eg. vim /proc/sys/net/ipv4/ip_forward
+
 After that, set the value inside to 1
 
 ### Drop packets and interrupt communication
@@ -28,6 +29,7 @@ Disable IP Forwarding.
 Open the following file with your favorite text editor:
 '/proc/sys/net/ipv4/ip_forward'
 > Eg. vim /proc/sys/net/ipv4/ip_forward
+
 After that, set the value inside to 0
 
 ## Examples
