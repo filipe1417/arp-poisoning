@@ -42,6 +42,9 @@ After that, set the value inside to 0
 
 > sudo ./arpPoison.py 10.0.0.2 10.0.0.3 - arp poisoning between the host 10.0.0.2 and 10.0.0.3
 
+# Contributions
+Contributions are very welcome. If you don't know where to start, look at the TODO list below, but you can add or remove what you want - just make a pull request. 
+
 # TODO
 * Better variable names
 * The script must run as "sudo" - add a condition to remind users that when executing without "sudo"
