@@ -16,7 +16,7 @@ This script can be used to perform ARP poisoning and its derivative attacks such
 
 To view packets that are not intended for you, you must enable IP Forwarding. Still, it is possible to use the script without activating it if your objective is to receive the packets and discard them, interrupting the communication between the two targets - in this case, if one of the targets is the gateway, the target will not be able to connect to the internet.
 
-### Get packets and allow communication
+### Intercept packets and allow communication
 For this, enable IP Forwarding.
 Open the following file with your favorite text editor:
 '/proc/sys/net/ipv4/ip_forward'
